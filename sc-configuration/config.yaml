@@ -1,31 +1,5 @@
-$ cat /sc-4.8.2-osx/config_examples/config.yml
----
-api-key: ""
-auth: []
-cainfo: ""
-direct-domains: []
-dns: []
-fast-fail-regexps: []
-log-stats: 0
-logfile: "-"
-max-logsize: 0
-metrics-address: "localhost:0"
-no-autodetect: false
-no-remove-colliding-tunnels: false
-no-ssl-bump-domains: []
-pac: ""
-pidfile: ""
-proxy: ""
-proxy-tunnel: false
-proxy-userpwd: ""
-readyfile: ""
-region: "us-west"
-rest-url: ""
-scproxy-port: 0
-se-port: 0
-shared-tunnel: false
-tunnel-domains: []
-tunnel-identifier: ""
-user: ""
-verbose: 0
-
+rest-url: 'https://api.us-west-4-i3er.saucelabs.com/rest/v1'
+user: ${{ secrets.SAUCE_USERNAME }}
+api-key: ${{ secrets.SAUCE_ACCESS_KEY }}
+vm-version: 'v2alpha'
+tunnel-identifier: github-action-tunnel
