@@ -1,13 +1,14 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on: 
+     workflow_dispatch:
 jobs:
     test:
         runs-on: ubuntu-latest
         name: Action Test
         steps:
             # ...
-            - uses: saucelabs/checkout@v3
+            - uses: actions/checkout@v3
             - uses: saucelabs/sauce-connect-action@v2
               with:
                   username: ${{ secrets.SAUCE_USERNAME }}
