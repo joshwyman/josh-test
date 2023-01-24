@@ -1,0 +1,5 @@
+rest-url: 'https://api.us-west-4-i3er.saucelabs.com/rest/v1'
+user: ${{ secrets.SAUCE_USERNAME }}
+api-key: ${{ secrets.SAUCE_ACCESS_KEY }}
+vm-version: 'v2alpha'
+
