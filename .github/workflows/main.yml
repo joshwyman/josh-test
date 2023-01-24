@@ -7,10 +7,12 @@ jobs:
         name: Action Test
         steps:
             # ...
+            - uses: actions/checkout@v3
             - uses: saucelabs/sauce-connect-action@v2
               with:
                   username: joshwyman
                   accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
+                  region: us-west
                   tunnelName: github-action-tunnel
                   configFile: ${{ github.workspace }}/sc-configuration/config.yaml
             # ...
